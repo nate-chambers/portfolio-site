@@ -1,0 +1,20 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <rect x="50" y="50" width="700" height="500" fill="#e9ecef" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  <text x="400" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#495057">Environmental Sensor Dashboard</text>
+  <rect x="80" y="150" width="200" height="120" fill="#fff" stroke="#dee2e6" stroke-width="1" rx="5"/>
+  <rect x="90" y="170" width="180" height="20" fill="#007bff" rx="3"/>
+  <rect x="90" y="200" width="140" height="20" fill="#28a745" rx="3"/>
+  <rect x="90" y="230" width="160" height="20" fill="#ffc107" rx="3"/>
+  <rect x="90" y="260" width="120" height="20" fill="#dc3545" rx="3"/>
+  <text x="400" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#6c757d">Temperature: 22.5°C</text>
+  <text x="400" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#6c757d">Humidity: 45%</text>
+  <text x="400" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#6c757d">Pressure: 1013 hPa</text>
+  <text x="400" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#6c757d">Air Quality: Good</text>
+  <circle cx="300" cy="400" r="80" fill="none" stroke="#007bff" stroke-width="3"/>
+  <circle cx="300" cy="400" r="60" fill="none" stroke="#28a745" stroke-width="3"/>
+  <circle cx="300" cy="400" r="40" fill="none" stroke="#ffc107" stroke-width="3"/>
+  <circle cx="300" cy="400" r="20" fill="none" stroke="#dc3545" stroke-width="3"/>
+  <text x="300" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">Sensor Network</text>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#adb5bd">Grafana Dashboard • MySQL • REST API</text>
+</svg>

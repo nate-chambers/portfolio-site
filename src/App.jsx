@@ -9,6 +9,10 @@ import { Textarea } from './components/ui/textarea.jsx'
 import { blogPosts } from './blog-posts.js'
 import BlogPost from './components/BlogPost.jsx'
 
+// Import project images
+import socialVideoImg from '/demos/social-video.png'
+import webPortfolioImg from '/demos/web-portfolio.png'
+
 const useDarkMode = () => {
   const [isDark, setIsDark] = useState(() => {
     if (typeof window === 'undefined') return false
@@ -95,7 +99,7 @@ const projects = [
       repo: 'https://github.com/nate-chambers/social-media-video-generator',
       demo: 'https://example.com/demo-video',
     },
-    media: '/demos/social-video.png', // Screenshot of video generation interface or workflow
+    media: socialVideoImg, // Screenshot of video generation interface or workflow
   },
   {
     title: 'Small Business Web Portfolio',
@@ -107,7 +111,7 @@ const projects = [
       repo: 'https://github.com/nate-chambers/web-dev-portfolio',
       demo: 'https://yourdomain.com',
     },
-    media: '/demos/web-portfolio.png', // Screenshot of portfolio website or client sites
+    media: webPortfolioImg, // Screenshot of portfolio website or client sites
   },
   {
     title: 'Environmental Sensor Data Pipeline',

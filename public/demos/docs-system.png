@@ -1,0 +1,34 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  <rect x="50" y="50" width="700" height="500" fill="#e9ecef" stroke="#dee2e6" stroke-width="2" rx="10"/>
+  <text x="400" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#495057">Protected Documentation System</text>
+  <rect x="80" y="150" width="300" height="200" fill="#fff" stroke="#dee2e6" stroke-width="1" rx="5"/>
+  <text x="230" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#495057">MkDocs Site</text>
+  <rect x="100" y="200" width="260" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="3"/>
+  <text x="230" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">📚 Getting Started</text>
+  <rect x="100" y="240" width="260" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="3"/>
+  <text x="230" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">🔧 Installation Guide</text>
+  <rect x="100" y="280" width="260" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="3"/>
+  <text x="230" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">📖 API Reference</text>
+  <rect x="100" y="320" width="260" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="3"/>
+  <text x="230" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">❓ Troubleshooting</text>
+  <rect x="420" y="150" width="300" height="200" fill="#fff" stroke="#dee2e6" stroke-width="1" rx="5"/>
+  <text x="570" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#495057">OAuth2 Flow</text>
+  <circle cx="520" cy="220" r="25" fill="#007bff"/>
+  <text x="520" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">User</text>
+  <circle cx="620" cy="220" r="25" fill="#28a745"/>
+  <text x="620" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Auth</text>
+  <circle cx="570" cy="280" r="25" fill="#ffc107"/>
+  <text x="570" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Proxy</text>
+  <circle cx="570" cy="340" r="25" fill="#dc3545"/>
+  <text x="570" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Docs</text>
+  <path d="M 545 220 L 595 220" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 620 245 L 595 255" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 595 305 L 545 315" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d"/>
+    </marker>
+  </defs>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#adb5bd">MkDocs • Docker • OAuth2 Proxy • NGINX</text>
+</svg>
