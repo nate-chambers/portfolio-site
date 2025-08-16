@@ -441,7 +441,7 @@ const Footer = () => (
 
 export default function App(){
   const { isDark, setIsDark } = useDarkMode()
-  const onResume = () => window.open('/resume.pdf', '_blank')
+  const onResume = () => window.open('/portfolio-site/resume.pdf', '_blank')
   return (
     <div className='min-h-screen neu-background'>
       <header className='sticky top-0 z-50 neu-header'>
