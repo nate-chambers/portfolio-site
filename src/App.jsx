@@ -96,7 +96,7 @@ const projects = [
     tags: ['Python', 'Google TTS', 'FFmpeg', 'Automation'],
     category: 'AI',
     links: {
-      repo: 'https://github.com/nate-chambers/social-media-video-generator',
+      repo: 'https://github.com/nate-chambers/reddit-tiktok-automation',
       demo: 'https://www.tiktok.com/@teddyreddit.stories',
     },
     media: socialVideoImg, // Screenshot of video generation interface or workflow
@@ -109,9 +109,10 @@ const projects = [
     category: 'Web',
     links: {
       repo: 'https://github.com/nate-chambers/web-dev-portfolio',
-      demo: 'https://yourdomain.com',
+      demo: 'https://natechambers4.wixstudio.com/nami',
     },
     media: webPortfolioImg, // Screenshot of portfolio website or client sites
+    hideCode: true, // Hide the code button for this project
   },
   {
     title: 'Environmental Sensor Data Pipeline',
@@ -268,7 +269,9 @@ const Projects = () => {
                 </div>
               ) : (
                 <div className='flex gap-3'>
-                  <Button asChild size='sm' className="neu-button-primary"><a href={p.links.repo} target='_blank' rel='noreferrer'><Github className='mr-2 h-4 w-4' /> Code</a></Button>
+                  {!p.hideCode && (
+                    <Button asChild size='sm' className="neu-button-primary"><a href={p.links.repo} target='_blank' rel='noreferrer'><Github className='mr-2 h-4 w-4' /> Code</a></Button>
+                  )}
                   <Button asChild size='sm' variant='outline' className="neu-button"><a href={p.links.demo} target='_blank' rel='noreferrer'><ExternalLink className='mr-2 h-4 w-4' /> Demo</a></Button>
                 </div>
               )}

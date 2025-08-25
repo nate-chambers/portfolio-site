@@ -2,11 +2,11 @@ export const blogPosts = [
   {
     id: 'tiktok-automation',
     title: 'How I Automated TikTok Shorts from Reddit Stories',
-    blurb: 'Building an automated content pipeline that transforms Reddit stories into engaging TikTok videos with AI-powered narration and smart captioning.',
+    blurb: 'Building an automated content pipeline that transforms Reddit stories into engaging TikTok videos with narration and smart captioning.',
     content: `
 # How I Automated TikTok Shorts from Reddit Stories
 
-Building an automated content pipeline that transforms Reddit stories into engaging TikTok videos with AI-powered narration and smart captioning.
+Building an automated content pipeline that transforms Reddit stories into engaging TikTok videos with narration and smart captioning.
 
 ## The Problem
 Creating viral TikTok content manually is time-consuming and inconsistent. I wanted to automate the entire process from story discovery to video upload, while maintaining the engaging quality that makes content go viral. The manual approach was taking 2-3 hours per video, and I needed a scalable solution.
