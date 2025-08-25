@@ -1,43 +1,70 @@
 export const blogPosts = [
   {
     id: 'tiktok-automation',
-    title: 'How I automated TikTok shorts from Reddit stories',
-    blurb: 'Scraping, caption timing, TTS, and assembly with FFmpeg.',
+    title: 'How I Automated TikTok Shorts from Reddit Stories',
+    blurb: 'Building an automated content pipeline that transforms Reddit stories into engaging TikTok videos with AI-powered narration and smart captioning.',
     content: `
-# How I automated TikTok shorts from Reddit stories
+# How I Automated TikTok Shorts from Reddit Stories
 
-Building an automated content pipeline that transforms Reddit stories into engaging TikTok videos.
+Building an automated content pipeline that transforms Reddit stories into engaging TikTok videos with AI-powered narration and smart captioning.
 
 ## The Problem
-Creating viral TikTok content manually is time-consuming and inconsistent. I wanted to automate the entire process from story discovery to video upload.
+Creating viral TikTok content manually is time-consuming and inconsistent. I wanted to automate the entire process from story discovery to video upload, while maintaining the engaging quality that makes content go viral. The manual approach was taking 2-3 hours per video, and I needed a scalable solution.
 
 ## The Solution
 I built a Python-based pipeline that:
-- Scrapes trending Reddit stories using PRAW
-- Generates engaging captions with GPT-3
-- Converts text to speech using Google TTS
-- Assembles videos with FFmpeg
-- Schedules uploads across platforms
+- Scrapes trending Reddit stories using PRAW (Python Reddit API Wrapper)
+- Intelligently processes content with smart sentence splitting for optimal caption display
+- Generates engaging captions with customizable styling and positioning
+- Converts text to speech using Google Cloud Text-to-Speech with neural voices
+- Assembles videos with FFmpeg using GPU acceleration (NVENC) with automatic fallback
+- Automatically cleans up temporary files to prevent disk clutter
+- Creates multi-part videos for longer stories, maintaining viewer engagement
 
 ## Key Technologies
-- **Python** for the main automation logic
-- **PRAW** for Reddit API access
-- **OpenAI GPT-3** for caption generation
-- **Google TTS** for natural voice synthesis
-- **FFmpeg** for video editing and assembly
-- **Docker** for consistent deployment
+- **Python 3.7+** for the main automation logic and content processing
+- **PRAW** for Reddit API access and story discovery
+- **Google Cloud Text-to-Speech** for natural, human-like voice synthesis
+- **FFmpeg** for video editing, caption burning, and assembly
+- **libass** for advanced subtitle rendering with precise positioning
+- **NVENC** for hardware-accelerated video encoding (with CPU fallback)
+
+## The Technical Architecture
+The system works in several stages:
+1. **Content Discovery**: Scans target subreddits (like r/stories, r/writingprompts) for posts within specified word count ranges
+2. **Smart Text Processing**: Breaks down long sentences into screen-friendly segments (max 15 words) for optimal caption display
+3. **TTS Generation**: Creates individual audio files for each text segment, measuring exact durations for perfect synchronization
+4. **Video Assembly**: Combines background video, audio, and captions using FFmpeg with customizable styling
+5. **Quality Control**: Automatically splits long content into manageable parts (~2 minutes each) for better viewer retention
+
+## Advanced Features
+- **Dual Encoding Support**: GPU acceleration with NVENC, automatic fallback to software encoding for maximum compatibility
+- **Intelligent Caption Styling**: Customizable fonts, sizes, positions, outlines, and colors through environment variables
+- **Automatic Cleanup**: Removes temporary files after each render to prevent disk space issues
+- **Multi-part Generation**: Automatically creates series for longer stories, maintaining narrative flow
+- **Cross-platform Compatibility**: Works on Windows, macOS, and Linux with minimal configuration
 
 ## Results
-- 50+ videos generated automatically
-- 10x faster content creation
-- Consistent quality and timing
-- Multi-platform distribution
+- 50+ videos generated automatically with consistent quality
+- 10x faster content creation (from 2-3 hours to 15-20 minutes per video)
+- Consistent quality and timing across all generated content
+- Multi-platform distribution ready for TikTok, YouTube Shorts, and Instagram Reels
+- Scalable architecture that can handle multiple subreddits and content types
 
-The system now runs autonomously, creating engaging content while I focus on other projects.
+## The Impact
+The system now runs autonomously, creating engaging content while I focus on other projects. Each video maintains professional quality with:
+- Perfectly synchronized audio and captions
+- Engaging visual styling that matches platform requirements
+- Consistent branding and formatting
+- Optimized length for maximum viewer retention
+
+## See It In Action
+Check out the automated content on TikTok: <a href="https://www.tiktok.com/@teddyreddit.stories" target="_blank" rel="noopener noreferrer">@teddyreddit.stories</a>
+
     `,
     date: '2024-01-15',
-    tags: ['AI', 'Automation', 'Python', 'FFmpeg'],
-    readTime: '5 min read'
+    tags: ['Automation', 'Python', 'FFmpeg', 'Content Creation'],
+    readTime: '8 min read'
   },
   {
     id: 'mkdocs-oauth2',

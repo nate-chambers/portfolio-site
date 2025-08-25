@@ -97,7 +97,7 @@ const projects = [
     category: 'AI',
     links: {
       repo: 'https://github.com/nate-chambers/social-media-video-generator',
-      demo: 'https://example.com/demo-video',
+      demo: 'https://www.tiktok.com/@teddyreddit.stories',
     },
     media: socialVideoImg, // Screenshot of video generation interface or workflow
   },
@@ -152,7 +152,8 @@ const toolbox = [
   { name: 'Grafana', icon: <Gauge className='h-5 w-5' />, note: 'Dashboards, QA' },
   { name: 'OAuth2', icon: <ShieldCheck className='h-5 w-5' />, note: 'Auth, proxy' },
   { name: 'Docs', icon: <FileText className='h-5 w-5' />, note: 'MkDocs, Pages' },
-  { name: 'Microsoft 365', icon: <FileText className='h-5 w-5' />, note: 'Office automation, SharePoint' },
+  { name: 'Microsoft 365', icon: <FileText className='h-5 w-5' />, note: 'Excel, Word, PowerPoint, Teams, Outlook, SharePoint' },
+  { name: 'GitHub', icon: <Code2 className='h-5 w-5' />, note: 'Version control, collaboration, CI/CD' },
 ]
 
 const statItems = [

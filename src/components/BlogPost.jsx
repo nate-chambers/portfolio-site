@@ -5,14 +5,39 @@ import { Button } from './ui/button.jsx'
 import { Badge } from './ui/badge.jsx'
 
 const BlogPost = ({ post, onBack }) => {
-  // Helper function to parse markdown text
+  // Helper function to parse markdown text and HTML links
   const parseMarkdownText = (text) => {
-    if (!text.includes('**')) return text
+    if (!text.includes('**') && !text.includes('<a ')) return text
     
-    const parts = text.split('**')
-    return parts.map((part, i) => 
-      i % 2 === 1 ? <strong key={i}>{part}</strong> : part
-    )
+    // Handle HTML links first
+    if (text.includes('<a ')) {
+      const linkMatch = text.match(/<a\s+href="([^"]+)"[^>]*>([^<]+)<\/a>/)
+      if (linkMatch) {
+        const [fullMatch, href, linkText] = linkMatch
+        const beforeLink = text.substring(0, text.indexOf(fullMatch))
+        const afterLink = text.substring(text.indexOf(fullMatch) + fullMatch.length)
+        
+        return (
+          <>
+            {beforeLink}
+            <a href={href} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
+              {linkText}
+            </a>
+            {afterLink}
+          </>
+        )
+      }
+    }
+    
+    // Handle bold text
+    if (text.includes('**')) {
+      const parts = text.split('**')
+      return parts.map((part, i) => 
+        i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+      )
+    }
+    
+    return text
   }
 
   // Helper function to render content with proper list grouping
