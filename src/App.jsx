@@ -102,6 +102,18 @@ const projects = [
     media: socialVideoImg, // Screenshot of video generation interface or workflow
   },
   {
+    title: 'LanguageAI - Podcast Generator',
+    slug: 'languageai-podcast-generator',
+    description: 'Generate personalized language-learning podcasts with AI scripts and Google Cloud TTS, deployed on Cloud Run.',
+    tags: ['Python', 'Flask', 'OpenAI', 'Google TTS', 'Docker', 'Cloud Run'],
+    category: 'AI',
+    links: {
+      repo: 'https://github.com/nate-chambers/languageAI',
+      demo: 'https://languageai-592821856944.us-central1.run.app/',
+    },
+    media: '/demos/laungAi.png',
+  },
+  {
     title: 'Small Business Web Portfolio',
     slug: 'web-dev-portfolio',
     description: 'Responsive sites for 10+ businesses with SEO optimization, analytics, and maintenance workflows.',
@@ -445,7 +457,7 @@ const Footer = () => (
 
 export default function App(){
   const { isDark, setIsDark } = useDarkMode()
-  const onResume = () => window.open('/resume.pdf', '_blank')
+  const onResume = () => window.open('https://drive.google.com/file/d/1rTwEf7pNRxTr26aRYZSMbZ3GoxV8eNue/view', '_blank')
   return (
     <div className='min-h-screen neu-background'>
       <header className='sticky top-0 z-50 neu-header'>

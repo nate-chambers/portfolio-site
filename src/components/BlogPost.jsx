@@ -47,7 +47,8 @@ const BlogPost = ({ post, onBack }) => {
     let i = 0
 
     while (i < lines.length) {
-      const line = lines[i]
+      // Normalize leading spaces so markdown like "  ## Heading" still works
+      const line = lines[i].replace(/^\s+/, '')
       
       // Handle headers
       if (line.startsWith('# ')) {
@@ -66,9 +67,11 @@ const BlogPost = ({ post, onBack }) => {
       // Handle bullet lists - group consecutive bullet points
       else if (line.startsWith('- ')) {
         const listItems = []
-        while (i < lines.length && lines[i].startsWith('- ')) {
+        while (i < lines.length) {
+          const li = lines[i].replace(/^\s+/, '')
+          if (!li.startsWith('- ')) break
           listItems.push(
-            <li key={`bullet-${i}`}>{parseMarkdownText(lines[i].substring(2))}</li>
+            <li key={`bullet-${i}`}>{parseMarkdownText(li.substring(2))}</li>
           )
           i++
         }
@@ -78,6 +81,9 @@ const BlogPost = ({ post, onBack }) => {
               {listItems}
             </ul>
           )
+        } else {
+          // safety: advance to avoid stalling
+          i++
         }
       }
       
@@ -85,9 +91,11 @@ const BlogPost = ({ post, onBack }) => {
       else if (line.startsWith('1. ')) {
         const listItems = []
         let counter = 1
-        while (i < lines.length && lines[i].startsWith(`${counter}. `)) {
+        while (i < lines.length) {
+          const li = lines[i].replace(/^\s+/, '')
+          if (!li.startsWith(`${counter}. `)) break
           listItems.push(
-            <li key={`numbered-${i}`}>{parseMarkdownText(lines[i].substring(3))}</li>
+            <li key={`numbered-${i}`}>{parseMarkdownText(li.substring(3))}</li>
           )
           i++
           counter++
@@ -98,6 +106,9 @@ const BlogPost = ({ post, onBack }) => {
               {listItems}
             </ol>
           )
+        } else {
+          // safety: advance to avoid stalling
+          i++
         }
       }
       

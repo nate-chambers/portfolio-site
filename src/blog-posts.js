@@ -1,5 +1,73 @@
 export const blogPosts = [
   {
+    id: 'language-ai',
+    title: 'LanguageAI - Generate Podcasts From Any Vocabulary List',
+    blurb: 'Turn a set of words into a polished, multi-language mini podcast with AI-written scripts, Google TTS audio, caching, and real-time progress.',
+    content: `
+  # LanguageAI - Generate Podcasts From Any Vocabulary List
+  
+  I built a web app that turns any vocabulary list into a short, high quality language-learning podcast, complete with AI-written scripts and pro TTS audio.
+  
+  Live demo: <a href="https://languageai-592821856944.us-central1.run.app/" target="_blank" rel="noopener noreferrer">Cloud Run demo</a>
+
+  ## The Problem
+  Vocabulary drills are boring and easy to drop. I wanted a tool that creates engaging, bite-sized audio lessons on demand, while keeping latency low and the UX clean for repeated practice.
+  
+  ## The Solution
+  A Flask app that:
+  - Generates a personalized podcast script with ChatGPT
+  - Uses Google Cloud Text-to-Speech to synthesize natural audio
+  - Streams progress updates and stitches segments into a single MP3
+  - Caches audio for repeat vocab so common requests are nearly instant
+  - Exposes simple endpoints for automation and debugging
+  
+  ## Key Technologies
+  - **Python 3.8+** for backend logic
+  - **Flask** for the web app and endpoints
+  - **OpenAI** for script generation
+  - **Google Cloud Text-to-Speech** for neural quality audio
+  - **pydub** and **FFmpeg** for audio assembly
+  - **Simple file cache** for replays and dedupe
+  
+  ## The Technical Architecture
+  1. **Request in**: Client posts vocabulary and target language
+  2. **Script generation**: ChatGPT creates a structured lesson with greetings, vocab in context, quick practice, and a wrap up
+  3. **Audio synthesis**: Google TTS renders segments, measuring durations to keep pacing tight
+  4. **Assembly**: Segments are concatenated to a single MP3 and stored
+  5. **Delivery**: The file is served for inline playback or download, with progress updates visible during generation
+  
+  ## Advanced Features
+  - **Multi-voice and language configs** via config.py for fast swaps
+  - **Audio caching** to avoid recompute on repeats
+  - **Request deduplication** to prevent duplicate work
+  - **Progress and debug views** for prompt logs, cache stats, and recent files
+  - **Quality control** with adjustable bitrate and speaking rate
+  
+  ## API Endpoints
+  - POST /generate_podcast - main entry point, returns a URL to the generated MP3
+  - GET / - UI
+  - GET /output_files - lists generated audio
+  - GET /cache_stats - cache hit rate and counters
+  - POST /cleanup - clears output directory
+  - GET /debug_files - shows generation logs and prompts
+  
+  ## Results
+  - End to end generation typically completes in about 10 to 30 seconds for short lessons, depending on model and TTS length
+  - High cache hit rate on repeated vocab sets
+  - Smooth UX on mobile and desktop with accessible controls
+  
+  ## The Impact
+  Teachers and learners can spin up custom practice in seconds, reuse sets for spaced repetition, and keep everything in one place. The app feels fast, the audio is clear, and the structure keeps attention without feeling robotic.
+  
+  ## Live Demo
+  Deployed to Cloud Run, public UI + endpoints are available.
+  
+      `,
+    date: '2025-08-29',
+    tags: ['AI', 'Python', 'Flask', 'OpenAI', 'Google TTS', 'Audio', 'Caching'],
+    readTime: '7 min read'
+  },  
+  {
     id: 'tiktok-automation',
     title: 'How I Automated TikTok Shorts from Reddit Stories',
     blurb: 'Building an automated content pipeline that transforms Reddit stories into engaging TikTok videos with narration and smart captioning.',
