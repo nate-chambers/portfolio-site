@@ -9,9 +9,12 @@ import { Textarea } from './components/ui/textarea.jsx'
 import { blogPosts } from './blog-posts.js'
 import BlogPost from './components/BlogPost.jsx'
 
-// Import project images
-import socialVideoImg from '/demos/social-video.png'
-import webPortfolioImg from '/demos/web-portfolio.png'
+// Base-aware path helper so assets work on GitHub Pages subpath
+const withBase = (p) => {
+  const base = import.meta.env.BASE_URL || '/'
+  const cleaned = p.startsWith('/') ? p.slice(1) : p
+  return `${base}${cleaned}`
+}
 
 const useDarkMode = () => {
   const [isDark, setIsDark] = useState(() => {
@@ -99,7 +102,7 @@ const projects = [
       repo: 'https://github.com/nate-chambers/reddit-tiktok-automation',
       demo: 'https://www.tiktok.com/@teddyreddit.stories',
     },
-    media: socialVideoImg, // Screenshot of video generation interface or workflow
+    media: withBase('/demos/social-video.png'), // Screenshot of video generation interface or workflow
   },
   {
     title: 'LanguageAI - Podcast Generator',
@@ -111,7 +114,7 @@ const projects = [
       repo: 'https://github.com/nate-chambers/languageAI',
       demo: 'https://languageai-592821856944.us-central1.run.app/',
     },
-    media: '/demos/laungAi.png',
+    media: withBase('/demos/laungAi.png'),
   },
   {
     title: 'Small Business Web Portfolio',
@@ -123,7 +126,7 @@ const projects = [
       repo: 'https://github.com/nate-chambers/web-dev-portfolio',
       demo: 'https://natechambers4.wixstudio.com/nami',
     },
-    media: webPortfolioImg, // Screenshot of portfolio website or client sites
+    media: withBase('/demos/web-portfolio.png'), // Screenshot of portfolio website or client sites
     hideCode: true, // Hide the code button for this project
   },
   {
@@ -136,7 +139,7 @@ const projects = [
       repo: '#',
       demo: '#',
     },
-    media: '/demos/sensor-data.png', // Screenshot of Grafana dashboard or data visualization
+    media: withBase('/demos/sensor-data.png'), // Screenshot of Grafana dashboard or data visualization
     nda: true,
   },
   {
@@ -149,7 +152,7 @@ const projects = [
       repo: '#',
       demo: '#',
     },
-    media: '/demos/docs-system.png', // Screenshot of documentation interface or architecture diagram
+    media: withBase('/demos/docs-system.png'), // Screenshot of documentation interface or architecture diagram
     nda: true,
   },
 ]
