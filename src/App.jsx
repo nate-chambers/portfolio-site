@@ -124,7 +124,7 @@ const projects = [
     category: 'Web',
     links: {
       repo: 'https://github.com/nate-chambers/web-dev-portfolio',
-      demo: 'https://natechambers4.wixstudio.com/nami',
+      demo: 'https://orriadeskai.com/',
     },
     media: withBase('/demos/web-portfolio.png'), // Screenshot of portfolio website or client sites
     hideCode: true, // Hide the code button for this project
