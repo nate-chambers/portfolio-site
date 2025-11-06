@@ -120,7 +120,7 @@ const projects = [
     title: 'Small Business Web Portfolio',
     slug: 'web-dev-portfolio',
     description: 'Responsive sites for 10+ businesses with SEO optimization, analytics, and maintenance workflows.',
-    tags: ['Wix Studio', 'WordPress', 'HTML/CSS/JS'],
+    tags: ['React', 'HTML/CSS/JS', 'Wix Studio', 'WordPress'],
     category: 'Web',
     links: {
       repo: 'https://github.com/nate-chambers/web-dev-portfolio',
