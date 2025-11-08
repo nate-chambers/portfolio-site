@@ -160,6 +160,9 @@ const projects = [
 const categories = ['All', 'AI', 'Web', 'Data', 'Embedded']
 
 const toolbox = [
+  { name: 'React', icon: <Sparkles className='h-5 w-5' />, note: 'Frontend, components, hooks' },
+  { name: 'HTML/CSS/JS', icon: <Globe className='h-5 w-5' />, note: 'Web fundamentals, responsive design' },
+  { name: 'Dart/Flutter', icon: <Code2 className='h-5 w-5' />, note: 'Cross-platform mobile, UI' },
   { name: 'Python', icon: <Code2 className='h-5 w-5' />, note: 'Automation, data, scripting' },
   { name: 'Go', icon: <Cpu className='h-5 w-5' />, note: 'Services, concurrency' },
   { name: 'Java', icon: <Code2 className='h-5 w-5' />, note: 'Backend, testing' },
